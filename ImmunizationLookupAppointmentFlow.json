@@ -1,0 +1,534 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "373bd891-866a-400e-8954-1e6d9eba80c3",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "f9366fc7-acaa-499f-964e-c4081e126137": {
+        "position": {
+          "x": 4259.2,
+          "y": 784.8
+        }
+      },
+      "Appointment Setter": {
+        "position": {
+          "x": 3424.8,
+          "y": 249.6
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "Attributes": {
+            "ScheduledDate": {
+              "useDynamic": true
+            },
+            "ScheduledTime": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "ScheduledDate",
+          "ScheduledTime"
+        ]
+      },
+      "62f68d4e-3113-4f6a-8a97-ed5df2bd825b": {
+        "position": {
+          "x": 3820.8,
+          "y": 272
+        }
+      },
+      "373bd891-866a-400e-8954-1e6d9eba80c3": {
+        "position": {
+          "x": 175.2,
+          "y": 91.2
+        }
+      },
+      "Immunization Lookup": {
+        "position": {
+          "x": 1073.6,
+          "y": -144
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "LambdaFunctionARN": {
+            "displayName": "ImmunizationLookupLambda"
+          },
+          "LambdaInvocationAttributes": {
+            "ImmunizationID": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicMetadata": {
+          "ImmunizationID": true
+        }
+      },
+      "Customer Immunization Prompt": {
+        "position": {
+          "x": 553.6,
+          "y": 91.2
+        },
+        "isFriendlyName": true,
+        "conditionMetadata": [],
+        "countryCodePrefix": "+1"
+      },
+      "immunizationID setter Attribute": {
+        "position": {
+          "x": 792.8,
+          "y": -74.4
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "Attributes": {
+            "ImmunizationID": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "ImmunizationID"
+        ]
+      },
+      "Status Setter": {
+        "position": {
+          "x": 1320,
+          "y": -122.4
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "Attributes": {
+            "Status": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "Status"
+        ]
+      },
+      "de9b4980-9b82-4f93-a808-6e87f434a4d2": {
+        "position": {
+          "x": 2913.6,
+          "y": 762.4
+        }
+      },
+      "bfb4665b-ab47-48c9-8101-8c688dd5f168": {
+        "position": {
+          "x": 3022.4,
+          "y": 330.4
+        },
+        "parameters": {
+          "LambdaFunctionARN": {
+            "displayName": "AppointmentSchedulingLambda"
+          },
+          "LambdaInvocationAttributes": {
+            "ImmunizationID": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicMetadata": {
+          "ImmunizationID": true
+        }
+      },
+      "d0b7a3dd-b06d-400d-89f1-34da8fb1c3e8": {
+        "position": {
+          "x": 1756,
+          "y": -36.8
+        },
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "12ad3010-5207-4c99-98c5-9aa10813eb67",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "UpToDate"
+          },
+          {
+            "id": "f2796290-013b-43c8-8107-777975893a2c",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "Overdue"
+          }
+        ]
+      },
+      "8d75817f-18fa-4484-9539-f0159b028103": {
+        "position": {
+          "x": 2408.8,
+          "y": 21.6
+        }
+      },
+      "e521c1e1-2dc1-4c54-a273-474c996ae294": {
+        "position": {
+          "x": 1412.8,
+          "y": 412
+        }
+      },
+      "ec2afc90-84f2-4be7-8f51-26e76c000924": {
+        "position": {
+          "x": 2657.6,
+          "y": 344
+        },
+        "conditionMetadata": [
+          {
+            "id": "4f088da7-7375-4f83-a2ce-df5f0efdee6f",
+            "value": "1"
+          },
+          {
+            "id": "23494ebc-440d-43d1-b77c-6814075800a1",
+            "value": "2"
+          }
+        ]
+      },
+      "af5349b9-f10d-4101-a933-aebf0abf2a63": {
+        "position": {
+          "x": 2515.2,
+          "y": 970.4
+        }
+      },
+      "fdb246b9-8a9a-47ba-b1d2-f3089ec71304": {
+        "position": {
+          "x": 2648,
+          "y": 704
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "ImmunizationLookupAppointmentFlow",
+    "description": "",
+    "type": "contactFlow",
+    "status": "published",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "f9366fc7-acaa-499f-964e-c4081e126137",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "ScheduledDate": "$.External.ScheduledSlot.Date",
+          "ScheduledTime": "$.External.ScheduledSlot.Time"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "Appointment Setter",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "62f68d4e-3113-4f6a-8a97-ed5df2bd825b",
+        "Errors": [
+          {
+            "NextAction": "f9366fc7-acaa-499f-964e-c4081e126137",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Successfully scheduled an appointment slot for $.Attributes.ScheduledDate at $.Attributes.ScheduledTime. Please refer to the online portal to change or cancel appointment times. Thank you for calling.\n"
+      },
+      "Identifier": "62f68d4e-3113-4f6a-8a97-ed5df2bd825b",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "f9366fc7-acaa-499f-964e-c4081e126137",
+        "Errors": [
+          {
+            "NextAction": "f9366fc7-acaa-499f-964e-c4081e126137",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Welcome to the Washington Health Department’s Immunization Information Line."
+      },
+      "Identifier": "373bd891-866a-400e-8954-1e6d9eba80c3",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "Customer Immunization Prompt",
+        "Errors": [
+          {
+            "NextAction": "e521c1e1-2dc1-4c54-a273-474c996ae294",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-west-2:687751209478:function:ImmunizationLookupLambda",
+        "InvocationTimeLimitSeconds": "3",
+        "LambdaInvocationAttributes": {
+          "ImmunizationID": "$.Attributes.ImmunizationID"
+        },
+        "ResponseValidation": {
+          "ResponseType": "JSON"
+        }
+      },
+      "Identifier": "Immunization Lookup",
+      "Type": "InvokeLambdaFunction",
+      "Transitions": {
+        "NextAction": "Status Setter",
+        "Errors": [
+          {
+            "NextAction": "e521c1e1-2dc1-4c54-a273-474c996ae294",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "True",
+        "InputTimeLimitSeconds": "5",
+        "Text": "Please enter your child’s 6-digit immunization ID using the keypad.",
+        "DTMFConfiguration": {
+          "DisableCancelKey": "False"
+        },
+        "InputValidation": {
+          "CustomValidation": {
+            "MaximumLength": "20"
+          }
+        }
+      },
+      "Identifier": "Customer Immunization Prompt",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "immunizationID setter Attribute",
+        "Errors": [
+          {
+            "NextAction": "e521c1e1-2dc1-4c54-a273-474c996ae294",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "ImmunizationID": "$.StoredCustomerInput"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "immunizationID setter Attribute",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "Immunization Lookup",
+        "Errors": [
+          {
+            "NextAction": "e521c1e1-2dc1-4c54-a273-474c996ae294",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "Status": "$.External.Status"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "Status Setter",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "d0b7a3dd-b06d-400d-89f1-34da8fb1c3e8",
+        "Errors": [
+          {
+            "NextAction": "e521c1e1-2dc1-4c54-a273-474c996ae294",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Let's try that again."
+      },
+      "Identifier": "de9b4980-9b82-4f93-a808-6e87f434a4d2",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "ec2afc90-84f2-4be7-8f51-26e76c000924",
+        "Errors": [
+          {
+            "NextAction": "f9366fc7-acaa-499f-964e-c4081e126137",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-west-2:687751209478:function:AppointmentSchedulingLambda",
+        "InvocationTimeLimitSeconds": "3",
+        "LambdaInvocationAttributes": {
+          "ImmunizationID": "$.Attributes.ImmunizationID"
+        },
+        "ResponseValidation": {
+          "ResponseType": "JSON"
+        }
+      },
+      "Identifier": "bfb4665b-ab47-48c9-8101-8c688dd5f168",
+      "Type": "InvokeLambdaFunction",
+      "Transitions": {
+        "NextAction": "Appointment Setter",
+        "Errors": [
+          {
+            "NextAction": "f9366fc7-acaa-499f-964e-c4081e126137",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Attributes.Status"
+      },
+      "Identifier": "d0b7a3dd-b06d-400d-89f1-34da8fb1c3e8",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "e521c1e1-2dc1-4c54-a273-474c996ae294",
+        "Conditions": [
+          {
+            "NextAction": "8d75817f-18fa-4484-9539-f0159b028103",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "UpToDate"
+              ]
+            }
+          },
+          {
+            "NextAction": "ec2afc90-84f2-4be7-8f51-26e76c000924",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "Overdue"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "e521c1e1-2dc1-4c54-a273-474c996ae294",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Your child’s vaccinations are up-to-date. Thank you for calling."
+      },
+      "Identifier": "8d75817f-18fa-4484-9539-f0159b028103",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "af5349b9-f10d-4101-a933-aebf0abf2a63",
+        "Errors": [
+          {
+            "NextAction": "af5349b9-f10d-4101-a933-aebf0abf2a63",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "System error, please call again or try the agent line for immunization look up."
+      },
+      "Identifier": "e521c1e1-2dc1-4c54-a273-474c996ae294",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "af5349b9-f10d-4101-a933-aebf0abf2a63",
+        "Errors": [
+          {
+            "NextAction": "af5349b9-f10d-4101-a933-aebf0abf2a63",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "5",
+        "Text": "Your child is overdue for vaccinations. Press 1 to schedule an appointment or 2 to end the call."
+      },
+      "Identifier": "ec2afc90-84f2-4be7-8f51-26e76c000924",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "de9b4980-9b82-4f93-a808-6e87f434a4d2",
+        "Conditions": [
+          {
+            "NextAction": "bfb4665b-ab47-48c9-8101-8c688dd5f168",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "1"
+              ]
+            }
+          },
+          {
+            "NextAction": "fdb246b9-8a9a-47ba-b1d2-f3089ec71304",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "2"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "de9b4980-9b82-4f93-a808-6e87f434a4d2",
+            "ErrorType": "InputTimeLimitExceeded"
+          },
+          {
+            "NextAction": "de9b4980-9b82-4f93-a808-6e87f434a4d2",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "de9b4980-9b82-4f93-a808-6e87f434a4d2",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "af5349b9-f10d-4101-a933-aebf0abf2a63",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "Thank you for calling."
+      },
+      "Identifier": "fdb246b9-8a9a-47ba-b1d2-f3089ec71304",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "af5349b9-f10d-4101-a933-aebf0abf2a63",
+        "Errors": [
+          {
+            "NextAction": "af5349b9-f10d-4101-a933-aebf0abf2a63",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}
